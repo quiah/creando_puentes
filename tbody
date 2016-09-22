@@ -1,0 +1,11 @@
+ <!--<?php while( $row = $resultado->fetch_assoc() ) {?>
+                                <tr>
+                                <p id="recNum" hidden> <?php echo $row['recetaId']; ?> </p>
+                                <th class="hidden-xs"> <?php echo $row['categoria']; ?> </th>
+                                <th> <?php echo $row['nombre']; ?> </th>
+                                <th class="hidden-xs"> <?php echo $row['fecha']; ?> </th>
+                                <th> <a id="link" href="php/editar/edit.php?id=<?php echo $row['recetaId']; ?> "> Editar <?php /*echo $productos['producto_id']*/ ?> </a> 
+                                </th>
+                                <th><button class="btn btn-danger del" id="<?php echo $row['recetaId']; ?>" role="button">Borrar</button></th>
+                                </tr>
+                              <?php } ?>

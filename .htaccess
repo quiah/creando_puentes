@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond ${LeechProtect:/home/chianatura/public_html/administrador:%{REMOTE_USER}:%{REMOTE_ADDR}:4:LYVQmDoC4fP903LlpjKMnhRZAIDbbyLR} leech
+RewriteRule .* http://173.247.252.133/~chianatura/
