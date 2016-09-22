@@ -32,19 +32,33 @@
 				break;
 		}
 	}
-	$c = $_POST['cat'];
-	$t = $_POST['titulo'];
-	$i = $_POST['in'];
-	$prep = $_POST['prep'];
 
-	$c = clear($c,"numero");
-	$t = clear($t, "cadena");
-	$i = clear($i, "cadena");
-	$prep = clear($prep, "cadena");
+	$nombre = $_POST['nombre'];
+	$apP = $_POST['apP'];
+	$apM = $_POST['apM'];
+	$fecha = $_POST['fecha'];
+	$calle = $_POST['calle'];
+	$ex = $_POST['ex'];
+	$tel = $_POST['tel'];
+	$sexo = $_POST['sexo'];
+	$turno = $_POST['turno'];
 
-	$insertar = "INSERT INTO recetas  (nombre, ingredientes, preparacion, categoriaID)  VALUES ('" .$t. "','" .$i. "','" .$prep. "','" .$c. "')";
+	
+	$nombre = clear($nombre, "cadena");
+	$apP = clear($apP, "cadena");
+	$apM = clear($apM, "cadena");
+	$calle = clear($calle, "cadena");
+	$tel = clear($tel, "numero");
+	$ex = clear($ex, "numero");
+	$sexo = clear($sexo, "cadena");
 
-	/*echo $insertar;*/
+	$insertar = "INSERT INTO beneficiario 
+	(nombres, apPaterno , apMaterno , fechaNac, calle, numExt, telefono, 
+	sexo, turno_id, usuario_id)  
+	VALUES 
+	('$nombre','$apP','$apM','$fecha','$calle','$ex','$tel','$sexo','$turno','QUIA')";
+	//('" .$t. "','" .$i. "','" .$prep. "','" .$c. "')";
+
 	if ($mysqli->real_query($insertar)) {
 		# code...
 		echo "1";
