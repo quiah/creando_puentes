@@ -4,7 +4,7 @@ $(document).ready( function(){
         $("#wrapper").toggleClass("toggled");
     });
     $btn = $("#salir");
-    console.log($btn);
+    //console.log($btn);
     $("#nueva").click(function(){
         
         $('body').fadeOut(1000, function(){
@@ -16,12 +16,12 @@ $(document).ready( function(){
             window.location.href = "./index.php";
         });
     });
-    /*$('.del').click(function(){
+    $('.del').click(function(){
         
         
         
         $numero = {numero : $(this).attr("id")}
-        r = confirm("¿Borrar Receta?" );
+        r = confirm("¿Borrar Beneficiario?" );
         if(r){
 
             $.ajax({
@@ -34,10 +34,10 @@ $(document).ready( function(){
                             location.reload();
                         }
                         else{
-                            alert("Ocurrio un problema en el servicio intenta de nuevo");
+                            alert("Ocurrio un problema en el servicio intenta de nuevo"+r);
                         }
                     }
                 });
         }
-    });*/
+    });
 });

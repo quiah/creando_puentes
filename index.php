@@ -97,7 +97,12 @@ ini_set("display_errors", 1);
                                 <th > <?php echo $row['nombres']; ?> </th>
                                 <th class="hidden-xs"> <?php echo $row['fechaNac']; ?> </th>
                                 <th class="hidden-xs"> <?php echo $row['telefono']; ?> </th>
-                                <th> <a id="link" href="php/editar/edit.php?id=<?php echo $row['beneficiario_id']; ?> "> Editar <?php /*echo $productos['producto_id']*/ ?> </a> 
+                                <th> 
+                                    <a id="link" href="php/editar/edit.php?id=<?php echo $row['beneficiario_id']; ?> ">Editar</a>
+                                    
+                                </th>
+                                <th>
+                                    <button class="btn btn-danger del" id="<?php echo $row['beneficiario_id'] ?>">Borrar</button>
                                 </th>
                                 
                               <?php } ?>

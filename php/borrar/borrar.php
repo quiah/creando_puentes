@@ -34,7 +34,9 @@
 	$id = $_POST['numero'];
 	$numero = clear($id,"numero");
 
-	$qry="DELETE FROM recetas WHERE recetaId = '".$numero."'";
+	$qry="DELETE FROM beneficiario WHERE beneficiario_id='$numero' ";
+
+	//echo $qry;
 
 	if ($mysqli->real_query($qry)) {
 		# code...
