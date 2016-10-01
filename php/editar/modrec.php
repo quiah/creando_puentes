@@ -31,21 +31,31 @@
 				break;
 		}
 	}
+	$id = $_POST['ben_id'];
+	$nombre = $_POST['nombre'];
+	$apP = $_POST['apP'];
+	$apM = $_POST['apM'];
+	$fecha = $_POST['fecha'];
+	$calle = $_POST['calle'];
+	$ex = $_POST['ex'];
+	$tel = $_POST['tel'];
+	$sexo = $_POST['sexo'];
+	$turno = $_POST['turno'];
 
-	$n = $_POST['number'];
-	$c = $_POST['cat'];
-	$t = $_POST['titulo'];
-	$i = $_POST['in'];
-	$prep = $_POST['prep'];
+	$nombre = clear($nombre, "cadena");
+	$apP = clear($apP, "cadena");
+	$apM = clear($apM, "cadena");
+	$calle = clear($calle, "cadena");
+	$tel = clear($tel, "numero");
+	$ex = clear($ex, "numero");
+	$sexo = clear($sexo, "cadena");
 
-	$n = clear($n,"numero");
-	$c = clear($c,"numero");
-	$t = clear($t, "cadena");
-	$i = clear($i, "cadena");
-	$prep = clear($prep, "cadena");
-
-	$upData = "UPDATE recetas SET nombre='" .$t. "', ingredientes='" .$i. "', preparacion='" .$prep. "', categoriaID='" .$c. "' WHERE recetaId='" .$n. "' ";
-	/*echo $upData;*/
+	$upData = "UPDATE beneficiario SET 
+				nombres = '$nombre' , apPaterno='$apP' , 
+				apMaterno='apM' , fechaNac='$fecha', calle='$calle', 
+				numExt='$ex', telefono='$tel', 
+				sexo='$sexo', turno_id='$turno' WHERE beneficiario_id='$id' ";
+	//echo $upData;
 
 	if ($mysqli->real_query($upData)) {
 		# code...
